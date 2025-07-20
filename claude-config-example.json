@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ai-agent-toolbox": {
+      "command": "node",
+      "args": ["/home/seo/Documents/Programming/zigzag/ai-agent-mcp-toolbox/dist/index.js"]
+    }
+  }
+}

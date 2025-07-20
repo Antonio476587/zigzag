@@ -1,0 +1,67 @@
+{
+  "name": "ai-agent-mcp-toolbox",
+  "version": "1.0.0",
+  "description": "Comprehensive MCP server providing AI agents with visual, development, and design validation tools",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "ai-agent-toolbox": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "docs": "typedoc src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agent",
+    "screenshot",
+    "ui-testing",
+    "design-validation",
+    "performance-monitoring",
+    "accessibility",
+    "microsoft-fluent",
+    "apple-hig",
+    "development-tools"
+  ],
+  "author": "AI Tools Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-tools/ai-agent-mcp-toolbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ai-tools/ai-agent-mcp-toolbox/issues"
+  },
+  "homepage": "https://github.com/ai-tools/ai-agent-mcp-toolbox#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": ["darwin", "win32", "linux"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "sharp": "^0.33.0",
+    "screenshot-desktop": "^1.15.0",
+    "chokidar": "^3.5.3",
+    "systeminformation": "^5.21.0"
+  },
+  "optionalDependencies": {
+    "robotjs": "^0.6.0",
+    "node-window-manager": "^2.2.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "ts-node": "^10.9.0",
+    "typedoc": "^0.25.0"
+  }
+}

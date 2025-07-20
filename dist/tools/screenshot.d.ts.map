@@ -1,0 +1,1 @@
+{"version":3,"file":"screenshot.d.ts","sourceRoot":"","sources":["../../src/tools/screenshot.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,cAAc,EAAE,MAAM,mBAAmB,CAAC;AAKrE,qBAAa,cAAe,YAAW,IAAI;IACzC,UAAU;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MAuCR;IAEI,OAAO,CAAC,IAAI,EAAE,cAAc,GAAG,OAAO,CAAC,UAAU,CAAC;YAoD1C,aAAa;YAeb,aAAa;YAcb,aAAa;YAkBb,YAAY;CAoB3B"}
