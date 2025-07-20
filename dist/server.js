@@ -5,6 +5,7 @@ import { ScreenshotTool } from './tools/screenshot-system.js';
 import { UIInspectTool } from './tools/ui-inspect-simple.js';
 import { PerformanceMonitorTool } from './tools/performance-monitor-simple.js';
 import { FileWatcherTool } from './tools/file-watcher.js';
+import { ScreenControlTool } from './tools/screen-control.js';
 export class AIAgentToolboxServer {
     server;
     tools;
@@ -21,7 +22,8 @@ export class AIAgentToolboxServer {
             ['screenshot', new ScreenshotTool()],
             ['ui_inspect', new UIInspectTool()],
             ['performance_monitor', new PerformanceMonitorTool()],
-            ['file_watcher', new FileWatcherTool()]
+            ['file_watcher', new FileWatcherTool()],
+            ['screen_control', new ScreenControlTool()]
         ]);
         this.setupHandlers();
     }

@@ -8,6 +8,7 @@
 - 🔍 **UI Element Inspection** - Extract UI hierarchies with accessibility analysis
 - ⚡ **Performance Monitoring** - Real-time system metrics and performance analysis
 - 👁️ **File System Watching** - Monitor file/directory changes in real-time
+- 🖱️ **Screen Control** - Click, type, scroll, and keyboard automation for AI agents
 - 🎯 **Claude Code Integration** - Seamless integration with Claude Code IDE
 
 ## 🎯 Why This Matters
