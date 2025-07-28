@@ -1,6 +1,6 @@
 {
   "name": "@origindot./zigzag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comprehensive MCP server providing AI agents with visual, development, and design validation tools",
   "type": "module",
   "main": "dist/index.js",
@@ -41,7 +41,11 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "os": ["darwin", "win32", "linux"],
+  "os": [
+    "darwin",
+    "win32",
+    "linux"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
     "sharp": "^0.33.0",
