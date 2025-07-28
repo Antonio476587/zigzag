@@ -7,7 +7,7 @@
 ```bash
 # Clone the repository
 git clone https://github.com/Antonio476587/zigzag.git
-cd zigzag/ai-agent-mcp-toolbox
+cd zigzag
 
 # Install dependencies
 npm install

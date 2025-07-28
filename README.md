@@ -45,7 +45,7 @@ npm install -g @origindot./zigzag
 ```bash
 # Clone the repository
 git clone https://github.com/Antonio476587/zigzag.git
-cd zigzag/ai-agent-mcp-toolbox
+cd zigzag
 
 # Install dependencies
 npm install
@@ -86,7 +86,7 @@ Add to your `~/.config/claude/mcp_settings.json`:
   "mcpServers": {
     "ai-agent-toolbox": {
       "command": "node",
-      "args": ["/path/to/zigzag/ai-agent-mcp-toolbox/dist/index.js"],
+      "args": ["/path/to/zigzag/dist/index.js"],
       "env": {}
     }
   }
@@ -256,7 +256,7 @@ Contributions are welcome! Please feel free to submit pull requests, report bugs
 ```bash
 # Clone and install
 git clone https://github.com/Antonio476587/zigzag.git
-cd zigzag/ai-agent-mcp-toolbox
+cd zigzag
 npm install
 
 # Install platform dependencies
