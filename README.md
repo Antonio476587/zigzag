@@ -31,10 +31,21 @@ Perfect for AI-assisted development, UI/UX testing, system monitoring, and acces
 
 ### Installation
 
+#### Option 1: NPM Install (Recommended)
+
+```bash
+# Install globally
+npm install -g @origindot./zigzag
+
+# The package will be ready to use with Claude Code
+```
+
+#### Option 2: From Source
+
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ai-agent-mcp-toolbox.git
-cd ai-agent-mcp-toolbox
+git clone https://github.com/Antonio476587/zigzag.git
+cd zigzag/ai-agent-mcp-toolbox
 
 # Install dependencies
 npm install
@@ -42,20 +53,41 @@ npm install
 # Build the project
 npm run build
 
-# Set up Claude Code integration
-./setup-claude-code.sh
+# Set up platform dependencies
+./setup-screen-control.sh  # Linux/macOS
+```
+
+#### Option 3: One-Line Installer
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Antonio476587/zigzag/main/ai-agent-mcp-toolbox/install.sh | bash
 ```
 
 ### Claude Code Configuration
 
-The setup script automatically configures Claude Code, but you can also manually add to your `~/.config/claude-code/settings.json`:
+#### For NPM Installation:
+Add to your `~/.config/claude/mcp_settings.json`:
 
 ```json
 {
   "mcpServers": {
     "ai-agent-toolbox": {
+      "command": "npx",
+      "args": ["@origindot./zigzag"],
+      "env": {}
+    }
+  }
+}
+```
+
+#### For Source Installation:
+```json
+{
+  "mcpServers": {
+    "ai-agent-toolbox": {
       "command": "node",
-      "args": ["/path/to/ai-agent-mcp-toolbox/dist/index.js"]
+      "args": ["/path/to/zigzag/ai-agent-mcp-toolbox/dist/index.js"],
+      "env": {}
     }
   }
 }
@@ -125,6 +157,30 @@ Monitor file and directory changes in real-time.
 - Duration-based monitoring
 - Status reporting
 
+### 🖱️ Screen Control Tool
+
+Automate mouse and keyboard interactions for AI agents.
+
+**Usage in Claude Code:**
+- *"Click at position 100, 200"*
+- *"Type 'Hello World'"*
+- *"Press Ctrl+C"*
+- *"Scroll down 3 times"*
+- *"Drag from 100,100 to 200,200"*
+
+**Actions:**
+- `click`, `double_click`, `right_click`: Mouse clicking
+- `type`: Text input
+- `key`: Keyboard shortcuts and special keys
+- `scroll`: Scroll in any direction
+- `drag`: Drag and drop operations
+- `move_mouse`: Mouse positioning
+
+**Cross-Platform Support:**
+- **Linux**: Uses `xdotool`
+- **macOS**: Uses `cliclick` 
+- **Windows**: Uses PowerShell automation
+
 ## 🧪 Testing
 
 Run the included tests to verify functionality:
@@ -171,17 +227,25 @@ src/
 
 ## 🌍 Platform Support
 
-| Platform | Screenshot | UI Inspect | Performance | File Watch |
-|----------|------------|------------|-------------|------------|
-| Linux    | ✅ Full    | ✅ Basic   | ✅ Full     | ✅ Full    |
-| macOS    | ✅ Full    | ✅ Basic   | ✅ Full     | ✅ Full    |
-| Windows  | ✅ Full    | ✅ Basic   | ✅ Full     | ✅ Full    |
+| Platform | Screenshot | UI Inspect | Performance | File Watch | Screen Control |
+|----------|------------|------------|-------------|------------|----------------|
+| Linux    | ✅ Full    | ✅ Basic   | ✅ Full     | ✅ Full    | ✅ Full        |
+| macOS    | ✅ Full    | ✅ Basic   | ✅ Full     | ✅ Full    | ✅ Full        |
+| Windows  | ✅ Full    | ✅ Basic   | ✅ Full     | ✅ Full    | ✅ Full        |
 
 ### Platform-Specific Notes
 
-**Linux:** Requires `import` (ImageMagick), `gnome-screenshot`, `scrot`, `spectacle`, or `maim`
-**macOS:** Uses built-in `screencapture` command  
-**Windows:** Uses PowerShell with System.Drawing for screenshots
+**Linux:** 
+- Screenshots: Uses system commands (`import`, `gnome-screenshot`, `scrot`, etc.)
+- Screen Control: Requires `xdotool` (`sudo apt install xdotool`)
+
+**macOS:** 
+- Screenshots: Built-in `screencapture` command
+- Screen Control: Requires `cliclick` (`brew install cliclick`)
+
+**Windows:** 
+- Screenshots: PowerShell with System.Drawing
+- Screen Control: Built-in PowerShell automation
 
 ## 🤝 Contributing
 
@@ -191,9 +255,12 @@ Contributions are welcome! Please feel free to submit pull requests, report bugs
 
 ```bash
 # Clone and install
-git clone <repo-url>
-cd ai-agent-mcp-toolbox
+git clone https://github.com/Antonio476587/zigzag.git
+cd zigzag/ai-agent-mcp-toolbox
 npm install
+
+# Install platform dependencies
+./setup-screen-control.sh  # Linux/macOS
 
 # Development mode
 npm run dev
@@ -203,6 +270,9 @@ npm run build
 
 # Lint
 npm run lint
+
+# Test
+npm test
 ```
 
 ## 📝 License
@@ -244,8 +314,13 @@ Check file permissions and ensure the target directory exists and is accessible.
 
 For issues, questions, or feature requests, please:
 1. Check the troubleshooting section above
-2. Search existing issues on GitHub
+2. Search existing issues on [GitHub](https://github.com/Antonio476587/zigzag/issues)
 3. Create a new issue with detailed information
+
+### Package Information
+- **npm**: `@origindot./zigzag`
+- **GitHub**: https://github.com/Antonio476587/zigzag
+- **Documentation**: https://github.com/Antonio476587/zigzag#readme
 
 ---
 
