@@ -41,14 +41,14 @@ Add to your Claude Code configuration (`~/.config/claude/mcp_settings.json`):
 
 ```bash
 # Install globally
-npm install -g @antonio476587/ai-agent-mcp-toolbox
+npm install -g @origindot./zigzag
 
 # Add to MCP config
 {
   "mcpServers": {
     "ai-agent-toolbox": {
       "command": "npx",
-      "args": ["@antonio476587/ai-agent-mcp-toolbox"],
+      "args": ["@origindot./zigzag"],
       "env": {}
     }
   }
